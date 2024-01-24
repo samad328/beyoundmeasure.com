@@ -1297,7 +1297,7 @@ a {
     justify-content: center;
 }
 
-.no-curtains .curtain img {
+ .media img {
     display: block;
     min-width: 100%;
     min-height: 100%;
