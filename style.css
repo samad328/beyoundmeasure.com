@@ -1275,7 +1275,7 @@ a {
     background: black;
 }
 
-.curtain {
+.media {
     position: absolute;
     top: 5%;
     right: 5%;
@@ -1283,14 +1283,14 @@ a {
    
 }
 
-.curtain img {
+.media img {
     display: none;
     mix-blend-mode: difference;
 }
 
 /*** handling errors ***/
 
-.no-curtains .curtain {
+.media {
     overflow: hidden;
     display: flex;
     align-items: center;
