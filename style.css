@@ -427,7 +427,8 @@ a {
     gap: 38rem;
     right: 20rem;
     display: flex;
-    position: absolute
+    position: absolute;
+    color: greenyellow;
 }
 
 @media (max-width: 767px) {
