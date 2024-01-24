@@ -3,6 +3,7 @@ import {TextTexture} from 'https://gistcdn.githack.com/martinlaxenaire/549b3b01f
 
 gsap.registerPlugin(ScrollTrigger);
 
+// Hero Image Animate with Curtains.js
 window.addEventListener("load", () => {
   // track the mouse positions to send it to the shaders
   const mousePosition = new Vec2();
@@ -31,7 +32,7 @@ window.addEventListener("load", () => {
   });
 
   // get our plane element
-  const planeElements = document.getElementsByClassName("curtain");
+  const planeElements = document.getElementsByClassName("media");
 
 
 
@@ -223,6 +224,7 @@ window.addEventListener("load", () => {
   }
 });
 
+// Lenis Smooth Scroll Start
 const lenis = new Lenis()
 
 lenis.on('scroll', (e) => {
@@ -234,55 +236,11 @@ lenis.on('scroll', ScrollTrigger.update)
 gsap.ticker.add((time)=>{
   lenis.raf(time * 1000)
 })
-
 gsap.ticker.lagSmoothing(0)
 
 
-// const locoScroll = new LocomotiveScroll({
-//   el: document.querySelector("[data-scroll-container]"),
-//   smooth: true,
 
-//   // for tablet smooth
-//   tablet: { smooth: true },
-
-//   // for mobile
-//   smartphone: { smooth: true }
-// });
-// locoScroll.on("scroll", ScrollTrigger.update);
-
-// ScrollTrigger.scrollerProxy("[data-scroll-container]", {
-//   scrollTop(value) {
-//     return arguments.length
-//       ? locoScroll.scrollTo(value, 0, 0)
-//       : locoScroll.scroll.instance.scroll.y;
-//   },
-//   getBoundingClientRect() {
-//     return {
-//       top: 0,
-//       left: 0,
-//       width: window.innerWidth,
-//       height: window.innerHeight
-//     };
-//   }
-
-//   // follwoing line is not required to work pinning on touch screen
-
-//   /* pinType: document.querySelector("[data-scroll-container]").style.transform
-//     ? "transform"
-//     : "fixed"*/
-// });
-
-// // --- RED PANEL ---
-// initScrollLetters()
-
-
-// ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
-
-// ScrollTrigger.refresh();
-
-
-// Function BigText-Scroll
-
+// Big Marquee Scroll
 function initScrollLetters() {
   // Scrolling Letters Both Direction
   // https://codepen.io/GreenSock/pen/rNjvgjo
@@ -334,44 +292,10 @@ function initScrollLetters() {
 }
 initScrollLetters() 
 
-// gsap.fromTo(
-//   '.char',
-//   { 
-//     x: 100,
-//     opacity: 0
-//   },
-//   {
-//     x: 0,
-//     opacity: 1,
-//     stagger: 0.05,
-//     duration: 2,
-//     ease: 'power4.out',
-//   }
-// )
 
-
-function initTricksWords(scrolltrigger) {
-    
-  // Copyright start
-  // © Code by T.RICKS, https://www.tricksdesign.com/
-  // You have the license to use this code in your projects but not redistribute it to others
-  // Tutorial: https://www.youtube.com/watch?v=xiAqTu4l3-g&ab_channel=TimothyRicks
-
-  // Find all text with .tricks class and break each letter into a span
-  var spanWord = document.getElementsByClassName("span-lines");
-  for (var i = 0; i < spanWord.length; i++) {
-
-  var wordWrap = spanWord.item(i);
-  wordWrap.innerHTML = wordWrap.innerHTML.replace(/(^|<\/?[^>]+>|\s+)([^\s<]+)/g, '$1<span class="span-line"><span class="span-line-inner">$2</span></span>');
-
-  }
-  scrolltrigger()
-}
-
+//Text Anim on Scroll  
 
 const fx18Titles = document.querySelectorAll('.sn');
-
-
 fx18Titles.forEach(title => {
   const chars = title.querySelectorAll('.char-w');
   let tl = gsap.timeline({
