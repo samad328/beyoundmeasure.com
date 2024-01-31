@@ -373,7 +373,7 @@ a {
     visibility: hidden;
 }
 
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
     .media {
         position:relative;
         top: initial;
@@ -382,6 +382,17 @@ a {
         visibility: initial
     }
 }
+@media screen and (max-width: 480px) {
+    .media {
+        position:relative;
+        top: initial;
+        right: initial;
+        height: 93.5rem;
+        
+        display: none;
+    }
+  }
+  
 
 .m-i {
     width: 100%;
@@ -1288,6 +1299,19 @@ a {
     display: none;
     mix-blend-mode: difference;
 }
+@media screen and (max-width:765px) {
+    .media {
+       position: relative;
+        top: 5%;
+        right: 5%;
+        bottom: 5%;
+       
+    }
+    .media img{
+        mix-blend-mode: normal;
+    }
+}
+
 
 /*** handling errors ***/
 
